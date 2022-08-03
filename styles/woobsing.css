@@ -1,8 +1,25 @@
 /* Variables */
 
+:root {
+  --color-primary: #0472B6;
+  --color-secondary: #FF5A18;
+
+  --color-blue-01: #2BA4C1;
+
+  --color-gray-01: #DCDCDC;
+  --color-gray-02: #FDFDFD;
+  --color-gray-03: #4C4C4C;
+  
+  --color-white: #0E0E0E;
+  --color-black: #FFFFFF;
+}
+
 /* Globals */
 
-* {}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 html {}
 html, body {}
 
