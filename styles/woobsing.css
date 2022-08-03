@@ -184,6 +184,7 @@ figure {
 }
 @media screen and (min-width: 768px) {
   .header-logo {
+    display: flex;
     height: 100px;
     margin: 0 24px 0 0;
     text-align: center;
@@ -255,10 +256,27 @@ main {}
 
 /* Forms */
 
-.form {}
-.form-field {}
-.form-control {}
-.form-control-error {}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.form-field {
+  width: 100%;
+}
+.form-control {
+  background-color: var(--color-white);
+  border: var(--color-gray-01);
+  height: 40px;
+  width: 100%;
+  padding: 8px 12px;
+}
+.form-control-error {
+  display: none;
+  font-size: 0.8em;
+  padding: 4px 0;
+}
 .form button[type="submig"] {}
 
 /* Hero */
@@ -351,11 +369,56 @@ main {}
 }
 
 .hero-form {
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
   grid-area: hero_form;
+  justify-content: center;
+  padding: 24px 32px;
 }
-.hero-form__title {}
+.hero-form__title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  position: relative;
+}
+.hero-form__title:after {
+  background-color: var(--color-blue-01);
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 50%;
+  margin-bottom: 8px;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.hero-form__title span {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+}
 .hero-form button[type="submit"] {
-  color: rebeccapurple;
+  background-color: var(--color-secondary);
+  border-radius: 2px;
+  border: 0;
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: 600;
+  height: 40px;
+  margin-top: 12px;
+  padding: 0 24px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out ;
+}
+.hero-form button[type="submit"]:hover {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  transform: translateY(2px);
 }
 
 /* Quotes */

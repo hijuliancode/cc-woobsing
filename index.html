@@ -90,34 +90,36 @@
           </ul>
           <div class="hero-form">
             <div class="hero-form__title">
-              Inscríbete <span>gratis</span>
+              ¡Inscríbete <span>gratis</span>!
             </div>
             <form class="form" action="#">
               <div class="form-field">
-                <input class="form-control" placeholder="Nombre" id="form-field-name" name="field-name" type="text" />
+                <input class="form-control" placeholder="Nombre" id="form-field-name" name="field-name" type="text" required />
                 <span class="form-control-error">El campo Nombre es requerido</span>
               </div>
               <div class="form-field">
-                <input class="form-control" placeholder="Número de documento" id="form-field-id" name="field-id" type="text" />
+                <input class="form-control" placeholder="Número de documento" id="form-field-id" name="field-id" type="number" required />
                 <span class="form-control-error">El campo Número es requerido</span>
               </div>
               <div class="form-field">
-                <input class="form-control" placeholder="Profesión" id="form-field-occupation" name="field-occupation" type="text" />
+                <input class="form-control" placeholder="Profesión" id="form-field-occupation" name="field-occupation" type="text" required />
                 <span class="form-control-error">El campo Profesión es requerido</span>
               </div>
               <div class="form-field">
-                <input class="form-control" placeholder="Entidad donde labora" id="form-field-work" name="field-work" type="text" />
+                <input class="form-control" placeholder="Entidad donde labora" id="form-field-work" name="field-work" type="text" required />
                 <span class="form-control-error">El campo Entidad donde labora es requerido</span>
               </div>
               <div class="form-field">
-                <input class="form-control" placeholder="Celular" id="form-field-phone" name="field-phone" type="text" />
+                <input class="form-control" placeholder="Celular" id="form-field-phone" name="field-phone" type="tel" required />
                 <span class="form-control-error">El campo Celular es requerido</span>
               </div>
               <div class="form-field">
-                <input class="form-control" placeholder="Email" id="form-field-email" name="field-email" type="text" />
+                <input class="form-control" placeholder="Email" id="form-field-email" name="field-email" type="email" required />
                 <span class="form-control-error">El campo Email es requerido</span>
               </div>
-              <button type="submit">Enviar inscripción</button>
+              <p class="flex justify-center">
+                <button type="submit">Enviar inscripción</button>
+              </p>
             </form>
           </div>
         </div>
