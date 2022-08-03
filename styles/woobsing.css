@@ -28,25 +28,36 @@
 
 /* Elements */
 
+html, body {
+  height: 100vh;
+}
+
 body {
   background-color: var(--color-gray-02);
   color: var(--color-black);
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
 }
 a {
   color: var(--color-black);
 }
-img {}
-h1, h2, h3, h4, h5, h6 {}
-p {}
+img {
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+p {
+  margin: 0;
+}
 figure {
   margin: 0;
   padding: 0;
 }
 
 /* Helpers */
-
-.divider {}
 
 .container {
   margin: 0 auto;
@@ -130,9 +141,6 @@ figure {
 }
 
 /* Icons */
-
-.icon {}
-.icon-check {}
 
 /* Navigation on top */
 .nav-top {
@@ -289,11 +297,11 @@ main {}
 }
 @media screen and (min-width: 768px) {
   .section-quotes {
-    padding: 40px 0;
+    padding: 24px 0;
   }
 }
 .section-quotes .icon {
-  font-size: 56px;
+  font-size: 40px;
   margin-right: 12px;
 }
 .section-quotes q {
@@ -305,7 +313,7 @@ main {}
 }
 @media screen and (min-width: 768px) {
   .section-quotes q {
-    font-size: 24px;
+    font-size: 20px;
     text-align: left;
     margin-right: 12px;
     margin-bottom: 0;
@@ -357,15 +365,14 @@ main {}
 
 /* Footer */
 .footer {
+  margin-top: auto;
   padding: 12px;
 }
-.footer [class^="contact-area"] {}
 .footer .contact-area-a {
   font-size: 18px;
   margin-bottom: 12px;
   text-align: center;
 }
-.footer .contact-area-b {}
 
 @media screen and (min-width: 768px) {
   .footer {
@@ -377,7 +384,7 @@ main {}
     background-color: var(--color-primary);
     color: white;
     display: flex;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     height: 100px;
     justify-content: flex-end;
@@ -448,5 +455,3 @@ main {}
   padding: 8px 12px;
   text-align: center;
 }
-.copyright span {}
-
