@@ -39,7 +39,10 @@ a {
 img {}
 h1, h2, h3, h4, h5, h6 {}
 p {}
-figure {}
+figure {
+  margin: 0;
+  padding: 0;
+}
 
 /* Helpers */
 
@@ -66,6 +69,7 @@ figure {}
     flex-direction: row;
   }
 }
+
 .mobile-wrapper {
   padding: 0 12px;
 }
@@ -73,6 +77,10 @@ figure {}
   .mobile-wrapper {
     padding: 0;
   } 
+}
+
+.items-center {
+  align-items: center;
 }
 
 .gap-01 {
@@ -234,7 +242,9 @@ main {}
 
 /* Hero */
 
-.hero {}
+.hero {
+  display: none;
+}
 .hero-grid {}
 
 .hero-banner {}
@@ -259,8 +269,38 @@ main {}
 }
 
 /* Quotes */
-.section-quotes {}
-.section-quotes q {}
+.section-quotes {
+  background-color: var(--color-gray-01);
+  border-bottom: 6px solid var(--color-primary);
+  box-shadow: 0 5px 10px -8px var(--color-gray-03);
+  color: var(--color-primary);
+  margin-bottom: 24px;
+  padding: 20px 16px;
+}
+@media screen and (min-width: 768px) {
+  .section-quotes {
+    padding: 40px 0;
+  }
+}
+.section-quotes .icon {
+  font-size: 56px;
+  margin-right: 12px;
+}
+.section-quotes q {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .section-quotes q {
+    font-size: 24px;
+    text-align: left;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
 
 /* Articles */
 .articles {}
