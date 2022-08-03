@@ -10,10 +10,12 @@
   --color-gray-02: #FDFDFD;
   --color-gray-03: #4C4C4C;
 
-  --color-white: #0E0E0E;
-  --color-black: #FFFFFF;
+  --color-white: #FFFFFF;
+  --color-black: #0E0E0E;
 
   --base-size: 4px;
+
+  --nav-top-height: 40px;
 }
 
 /* Globals */
@@ -22,14 +24,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-html {}
-html, body {
-}
 
 /* Elements */
 
-body {}
-a {}
+body {
+  background-color: var(--color-gray-02);
+  color: var(--color-black);
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  color: var(--color-black);
+}
 img {}
 h1, h2, h3, h4, h5, h6 {}
 p {}
@@ -38,13 +43,47 @@ figure {}
 /* Helpers */
 
 .divider {}
-.container {}
-.flex {}
+
+.container {
+  margin: 0 auto;
+  padding: 0 12px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0;
+    max-width: 1224px;
+  } 
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-01 {
+  gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  .gap-01 {
+    gap: 12px;
+  }
+}
+
+.justify-center {
+  justify-content: center;
+}
+
 [class^="subtitle"] {
   color: red;
 }
 .subtitle-1 {}
 .subtitle-2 {}
+
+
+@media screen and (max-width: 768px) {
+  .mobile-none {
+    display: none;
+  }
+}
 
 /* Icons */
 
@@ -52,8 +91,26 @@ figure {}
 .icon-check {}
 
 /* Navigation on top */
-.nav-top {}
-.nav-top__item {}
+.nav-top {
+  background-color: rgba(0,0,0,.15);
+  color: var(--color-black);
+  font-size: 14px;
+  height: var(--nav-top-height);
+}
+.nav-top__item {
+  color: var(--color-black);
+  align-items: center;
+  display: flex;
+  height: var(--nav-top-height);
+  text-decoration: none;
+  text-align: center;
+}
+.nav-top__item:hover,
+.nav-top__item.active {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
 
 /* Header */
 
