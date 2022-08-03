@@ -9,9 +9,11 @@
   --color-gray-01: #DCDCDC;
   --color-gray-02: #FDFDFD;
   --color-gray-03: #4C4C4C;
-  
+
   --color-white: #0E0E0E;
   --color-black: #FFFFFF;
+
+  --base-size: 4px;
 }
 
 /* Globals */
@@ -21,7 +23,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 html {}
-html, body {}
+html, body {
+}
 
 /* Elements */
 
