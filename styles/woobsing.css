@@ -1,0 +1,108 @@
+/* Variables */
+
+/* Globals */
+
+* {}
+html {}
+html, body {}
+
+/* Elements */
+
+body {}
+a {}
+img {}
+h1, h2, h3, h4, h5, h6 {}
+p {}
+figure {}
+
+/* Helpers */
+
+.divider {}
+.container {}
+.flex {}
+[class^="subtitle"] {
+  color: red;
+}
+.subtitle-1 {}
+.subtitle-2 {}
+
+/* Icons */
+
+.icon {}
+.icon-check {}
+
+/* Navigation on top */
+.nav-top {}
+.nav-top__item {}
+
+/* Header */
+
+.header {}
+.header-logo {}
+.header-logo__img {}
+.header-courses {}
+.header-courses ul {}
+.header-courses ul li {}
+.header-courses ul li a {}
+
+.header-actions {}
+.header-actions a {}
+
+/* Main */
+
+main {}
+
+/* Forms */
+
+.form {}
+.form-field {}
+.form-control {}
+.form-control-error {}
+.form button[type="submig"] {}
+
+/* Hero */
+
+.hero {}
+.hero-grid {}
+
+.hero-banner {}
+.hero-banner .hero-banner-item {}
+.hero-banner .hero-banner-item img {}
+.hero-banner .hero-banner-item-wrapper {}
+.hero-banner .hero-banner-item__title {}
+.hero-banner .hero-banner-item__title span {}
+.hero-banner .hero-banner-item__inscription {}
+
+.hero-items {}
+.hero-items li {}
+.hero-items li .icon {}
+.hero-items li span {}
+.hero-items li.show-more {}
+.hero-items li.show-more a {}
+
+.hero-form {}
+.hero-form__title {}
+.hero-form button[type="submit"] {
+  color: rebeccapurple;
+}
+
+/* Quotes */
+.section-quotes {}
+.section-quotes q {}
+
+/* Articles */
+.articles {}
+.article {}
+.article-description {}
+
+/* Footer */
+.footer {}
+.footer [class^="contact-area"] {}
+.footer .contact-area-a {}
+.footer .contact-area-b {}
+
+/* Copyright */
+
+.copyright {}
+.copyright span {}
+
