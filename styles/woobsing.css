@@ -134,7 +134,8 @@ figure {
   background-color: var(--color-primary);
   border: 0;
   height: 1px;
-  margin: 12px 0;
+  margin: 12px 0 12px auto;
+  max-width: 300px;
 }
 
 .w-full {
@@ -211,7 +212,7 @@ figure {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 .header-courses ul li:not(:last-child) {
   margin-bottom: 8px;
@@ -250,10 +251,6 @@ figure {
   background-color: var(--color-white);
 }
 
-/* Main */
-
-main {}
-
 /* Forms */
 
 .form {
@@ -267,30 +264,34 @@ main {}
 }
 .form-control {
   background-color: var(--color-white);
+  border-radius: 2px;
   border: var(--color-gray-01);
   height: 40px;
-  width: 100%;
   padding: 8px 12px;
+  width: 100%;
 }
 .form-control-error {
   display: none;
   font-size: 0.8em;
   padding: 4px 0;
 }
-.form button[type="submig"] {}
 
 /* Hero */
-
-.hero {
-}
 .hero-grid {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  height: 500px;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  grid-template-areas:
-    "hero_banner hero_form"
-  ;
+}
+@media screen and (min-width: 768px) {
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 500px;
+    position: relative;
+    grid-template-areas:
+      "hero_banner hero_form"
+    ;
+  }
 }
 
 .hero-banner {
@@ -299,20 +300,33 @@ main {}
 }
 .hero-banner .hero-banner-item {
   display: block;
-  height: 500px;
   position: relative;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero-banner .hero-banner-item {
+    height: 500px;
+  }
 }
 .hero-banner .hero-banner-item img {
   height: 500px;
   object-fit: cover;
   width: 100%;
+  object-position: left;
 }
 .hero-banner .hero-banner-item-wrapper {
+  left: 24px;
   position: absolute;
-  right: 48px;
   top: 50%;
   transform: translateY(-50%);
+}
+@media screen and (min-width: 768px) {
+  .hero-banner .hero-banner-item-wrapper {
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 .hero-banner .hero-banner-item__title {
   color: var(--color-primary);
@@ -321,6 +335,11 @@ main {}
   line-height: 1;
   margin: 0;
 }
+@media screen and (min-width: 768px) {
+  .hero-banner .hero-banner-item__title {
+    text-align: right;
+  }
+}
 .hero-banner .hero-banner-item__title span {
   color: var(--color-secondary);
 }
@@ -328,20 +347,33 @@ main {}
   color: var(--color-secondary);
   display: block;
   font-size: 24px;
-  text-align: right;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .hero-banner .hero-banner-item__inscription {
+    text-align: right;
+  }
 }
 
 .hero-items {
   background-color: rgba(43, 164, 193, 0.5);
   bottom: 0;
   display: flex;
+  flex-direction: column;
   font-size: 24px;
-  height: 120px;
   list-style-type: none;
-  margin: 0;
+  margin: -5px 0 0;
   padding: 0;
-  position: absolute;
-  width: 70%;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero-items {
+    flex-direction: row;
+    height: 120px;
+    margin-top: 0;
+    position: absolute;
+    width: 70%;
+  }
 }
 .hero-items li {
   align-items: center;
@@ -354,15 +386,19 @@ main {}
   font-size: 2em;
   color: var(--color-secondary);
 }
-.hero-items li span {}
 .hero-items .show-more {
   align-items: center;
   background-color: var(--color-secondary);
   color: var(--color-white);
   display: flex;
   justify-content: center;
-  padding: 0 12px;
+  padding: 12px 24px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .hero-items .show-more {
+    padding: 0 12px;
+  }
 }
 .hero-items .show-more a {
   color: var(--color-white);
